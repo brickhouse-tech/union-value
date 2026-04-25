@@ -1,0 +1,13 @@
+name: publish
+on:
+  push:
+    tags:
+      - "v*"
+jobs:
+  tests:
+    uses: brickhouse-tech/.github/.github/workflows/tests.yml@main
+    with:
+      node-versions: '["20.x"]'
+  publish:
+    needs: [tests]
+    uses: brickhouse-tech/.github/.github/workflows/publish.yml@main

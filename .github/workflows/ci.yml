@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  push:
+    branches: [master, security/*]
+  pull_request:
+    branches: [master]
+
+jobs:
+  tests:
+    uses: brickhouse-tech/.github/.github/workflows/tests.yml@main
+    with:
+      node-versions: '["18.x", "20.x", "22.x"]'

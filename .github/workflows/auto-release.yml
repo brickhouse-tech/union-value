@@ -1,0 +1,14 @@
+name: auto-release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci.yml
+
+  release:
+    needs: [ci]
+    uses: brickhouse-tech/.github/.github/workflows/auto-release.yml@main
