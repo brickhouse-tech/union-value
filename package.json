@@ -1,7 +1,7 @@
 {
   "name": "@brickhouse-tech/union-value",
   "description": "Set an array of unique values as the property of an object. Supports setting deeply nested properties using using object-paths/dot notation.",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "homepage": "https://github.com/brickhouse-tech/union-value",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "contributors": [
